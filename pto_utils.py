@@ -39,5 +39,8 @@ class PTO_Utils:
     def getLength(self, context):
         targets = bpy.context.selected_objects
 
-    def distanceTo(self, x, y):
-        return math.sqrt((x[0] - y[0])**2 + (x[1] - y[1])**2 + (x[2] - y[2])**2)
+    def distanceTo(self, a, b):
+        return math.sqrt((a[0] - b[0])**2 + (a[1] - b[1])**2 + (a[2] - b[2])**2)
+
+    def getCenter(self, a, b):
+        return ((a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (a[2] + b[2]) / 2)

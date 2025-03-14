@@ -1,0 +1,42 @@
+{
+    "Angle": [
+        { 
+            "name": "L_50x50x6",
+            "tooltip": "L_50x50x6", 
+            "desc": "B 50mm x H 50mm x 厚み 6mm" 
+        },
+        { 
+            "name": "L_40x40x5",
+            "tooltip": "L_40x40x5", 
+            "desc": "B 40mm x H 40mm x 厚み 5mm" 
+        }
+    ],
+    "Channel": [
+        { 
+            "name": "C_100x50x6", 
+            "tooltip": "C_100x50x6",
+            "desc": "B 50mm x H 100mm x 厚み 6mm" 
+        }
+    ],
+    "FlatBar": [
+        { 
+            "name": "FB_50x6", 
+            "tooltip": "FB_50x6",
+            "desc": "幅 50mm x 厚み 6mm" 
+        }
+    ],
+    "IBeam": [
+        { 
+            "name": "I_125x250x10", 
+            "tooltip": "I_125x250x10",
+            "desc": "B 125mm x H 250mm x 厚み 10" 
+        }
+    ],
+    "H": [
+        { 
+            "name": "H_100x100x6x8", 
+            "tooltip": "H_100x100x6x8",
+            "desc": "H 100mm x H 100mm x 中厚み 6mm x 外厚み 8mm" 
+        }
+    ]
+}
