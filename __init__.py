@@ -16,6 +16,7 @@ bl_info = {
 }
 
 from . import pto_ui
+from Factory import pto_factory_utils
 
 if "bpy" in locals():
     import importlib
@@ -24,28 +25,21 @@ if "bpy" in locals():
 
 def register():
     bpy.types.Scene.StructureTypes = []
-    bpy.types.Scene.SpecsAngle = []
-    bpy.types.Scene.SpecsChannel = []
-    bpy.types.Scene.SpecsFlatBar = []
-    bpy.types.Scene.SpecsIBeam = []
-    bpy.types.Scene.SpecsH = []
+    bpy.types.Scene.SpecsAngle = {}
+    bpy.types.Scene.SpecsChannel = {}
+    bpy.types.Scene.SpecsFlatBar = {}
+    bpy.types.Scene.SpecsIBeam = {}
+    bpy.types.Scene.SpecsH = {}
 
     with open("Factory/specs.json", encoding="utf-8") as f:
         specs = json.load(f)
+
+        factory_utils = pto_factory_utils.PTOFactoryUtils()
         
         for name in specs:
             bpy.types.Scene.StructureTypes.append({name, name, name})
             for spec in specs[name]:
-                if name == "Angle":
-                    SpecsAngle.append(spec["name"], spec["tooltip"], spec["desc"])
-                elif name == "Channel":
-                    SpecsChannel.append(spec["name"], spec["tooltip"], spec["desc"])
-                elif name == "FlatBar":
-                    SpecsFlatBar.append(spec["name"], spec["tooltip"], spec["desc"])
-                elif name == "IBeam":
-                    SpecsIBeam.append(spec["name"], spec["tooltip"], spec["desc"])
-                elif name == "H":
-                    SpecsH.append(spec["name"], spec["tooltip"], spec["desc"])
+                factory_utils.GetSpecListByType(name)[spec["name"]] = [spec["tooltip"], spec["desc"]]
 
     bpy.types.Scene.pto_factory_expanded = bpy.props.BoolProperty()
 

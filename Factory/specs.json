@@ -36,7 +36,7 @@
         { 
             "name": "H_100x100x6x8", 
             "tooltip": "H_100x100x6x8",
-            "desc": "H 100mm x H 100mm x 中厚み 6mm x 外厚み 8mm" 
+            "desc": "B 100mm x H 100mm x 中厚み 6mm x 外厚み 8mm" 
         }
     ]
 }

@@ -33,28 +33,28 @@ class PTO_PT_Object(bpy.types.Panel):
         description = "Structure type for create Object."
     )
 
-    bpy.types.Scene.AngleSpec = EnumProperty(
-        name = "AngleSpec",
+    bpy.types.Scene.StructAngle = EnumProperty(
+        name = "StructAngle",
         items = SpecsAngle,
         description = "Structure type for create Object."
     )
-    bpy.types.Scene.ChannelSpec = EnumProperty(
-        name = "ChannelSpec",
+    bpy.types.Scene.StructChannel = EnumProperty(
+        name = "StructChannel",
         items = SpecsChannel,
         description = "Structure type for create Object."
     )
-    bpy.types.Scene.FlatBarSpec = EnumProperty(
-        name = "FlatBarSpec",
+    bpy.types.Scene.StructFlatBar = EnumProperty(
+        name = "StructFlatBar",
         items = SpecsFlatBar,
         description = "Structure type for create Object."
     )
-    bpy.types.Scene.IBeamSpec = EnumProperty(
-        name = "IBeamSpec",
+    bpy.types.Scene.StructIBeam = EnumProperty(
+        name = "StructIBeam",
         items = SpecsIBeam,
         description = "Structure type for create Object."
     )
-    bpy.types.Scene.HSpec = EnumProperty(
-        name = "HSpec",
+    bpy.types.Scene.StructH = EnumProperty(
+        name = "StructH",
         items = SpecsH,
         description = "Structure type for create Object."
     )
